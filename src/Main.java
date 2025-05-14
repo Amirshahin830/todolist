@@ -10,8 +10,24 @@ public class Main {
         int num1 = cin.nextInt();
         System.out.print("Enter number 2 : ");
         int num2 = cin.nextInt();
-        double sum;
-        sum = (double) num1 / num2;
-        System.out.printf("Final number is : %.3f" , sum );
+        cin.nextLine();
+        System.out.print("Enter operation : ");
+        char op = cin.nextLine().charAt(0);
+        double final_number=0;
+        switch (op) {
+            case '+':
+                final_number = num1 + num2;
+                break;
+            case '-':
+                final_number = num1 - num2;
+                break;
+            case '*':
+                final_number = num1 * num2;
+                break;
+            case '/':
+                final_number = (double) num1 / num2;
+        }
+
+        System.out.printf("Final number is : %.3f" , final_number );
     }
 }
